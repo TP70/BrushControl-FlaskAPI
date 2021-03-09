@@ -1,4 +1,3 @@
-# REF: https://medium.com/datainpoint/flask-web-api-quickstart-3b13d96cccc2
 
 import flask
 from flask import jsonify, request

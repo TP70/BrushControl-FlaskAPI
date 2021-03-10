@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="New User"/>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/NU.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <title>New User</title>
+</head>
+<body>
+<div class="container">
+  <header class="header">
+    <h1 id="title" class="text-center">New User Form</h1>
+    <p id="description" class="description text-center">
+      Welcome on board!
+    </p>
+  </header>
+  <form id="survey-form">
+    <div class="form-group">
+      <label id="number-label" for="number"
+        >How Long brushing Up?<span class="clue"></span></label
+      >
+      <input
+        type="number"
+        id="number"
+        min="0.0"
+        max="20.0"
+        class="form-control"
+        placeholder="seconds"
+      />
+    </div>
+        <div class="form-group">
+      <label for="number"
+        >How Long brushing down?<span class="clue"></span></label
+      >
+      <input
+        type="number"
+        min="0.0"
+        max="20.0"
+        class="form-control"
+        placeholder="seconds"
+      />
+    </div>
+              <div class="form-group">
+      <label for="number"
+        >How Long brushing left?<span class="clue"></span></label
+      >
+      <input
+        type="number"
+        min="0.0"
+        max="20.0"
+        class="form-control"
+        placeholder="seconds"
+      />
+    </div>
+              <div class="form-group">
+      <label for="number"
+        >How Long brushing right?<span class="clue"></span></label
+      >
+      <input
+        type="number"
+        min="0.0"
+        max="20.0"
+        class="form-control"
+        placeholder="seconds"
+      />
+    </div>
+      <div class="form-group">
+      <button type="submit" id="submit" class="submit-button">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>

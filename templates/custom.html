@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="../static/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/jquery.dataTables.css">
+    <title>Play Brush</title>
+
+</head>
+<body>
+<form name="filter" action="/get_custom" method="POST">
+    <center>
+        <div class="boxes">
+            <select name="playbrushid" id="playbrushid">
+                <option disabled selected>Please select:</option>
+                {% for id in list_ids %}
+                <option value="{{ id }}">{{ id }}</option>
+                {% endfor %}
+            </select>
+            {% for column in titles %}
+            <input type="checkbox" name="{{ column }}" id="box-{{ loop.index }}">
+            <label for="box-{{ loop.index }}">{{ column }}</label>
+            {% endfor %}
+            <input type="submit" value="Search" class="btn"/>
+        </div>
+    </center>
+</form>
+</body>
+</html>

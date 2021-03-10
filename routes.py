@@ -3,7 +3,6 @@ from flask import request, render_template
 import pandas as pd
 import numpy as np
 
-
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 app.config["JSON_AS_ASCII"] = False
@@ -43,9 +42,14 @@ def custom_rawdata():
         return render_template('tables.html', table=result.to_html(classes='data'), titles=headers)
 
 
-@app.route('/new_user', methods=['POST'])
+@app.route('/new_user', methods=['GET', 'POST'])
 def submit():
-    return render_template('new_user.html')
+    if request.method == 'POST':
+        print('hi', request.form.get("number"))
+        get_id = request.form.get("number")
+        if rawdata.query(f"PlaybrushID=='{get_id}'") is None:
+            return render_template('success.html')
+    return render_template('new_user.html', message='Please enter required fields!')
 
 
 def get_column_values_from_table(header, datasource):

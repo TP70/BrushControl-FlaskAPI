@@ -3,10 +3,10 @@
 
 ### Install
 ```sh
-$ pip install flask numpy pandas
+$ pip install -r requirements.txt
 ```
 
 ### Run
 ```sh
-$ python api.py
+$ python app.py
 ```
